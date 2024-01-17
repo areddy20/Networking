@@ -1,0 +1,255 @@
+Script started on Sun 04 Jun 2023 09:44:51 PM EDT
+[aditi@aditi-centos-07 ~]$ python3 --version
+Python 3.6.8
+
+[aditi@aditi-centos-07 ~]$ pip3 list
+DEPRECATION: The default format will switch to columns in the future. You can use --format=(legacy|columns) (or define a format=(legacy|columns) in your pip.conf under the [list] section) to disable this warning.
+dnslib (0.9.23)
+pip (9.0.3)
+setuptools (39.2.0)
+
+[aditi@aditi-centos-07 ~]$ python3 my-dns-client.py
+Usage: python my-dns-client.py <host-name>
+
+[aditi@aditi-centos-07 ~]$ python3 my-dns-client.py gmu.edu
+Preparing DNS query...
+Contacting DNS server...
+Sending DNS query...
+DNS query attempt 1 of 3
+Sending DNS query...
+DNS response received
+Processing DNS response...
+
+Header:
+header.ID = 14316
+header.QR = 1
+header.OPCODE = 0
+header.AA = 0
+header.TC = 0
+header.RD = 1
+header.RA = 1
+header.Z = 0
+header.RCODE = 0
+header.QDCOUNT = 1
+header.ANCOUNT = 1
+header.NSCOUNT = 0
+header.ARCOUNT = 0
+
+Question:
+question.QNAME = gmu.edu.
+question.QTYPE = 1
+question.QCLASS = 1
+
+Answer:
+answer.NAME = gmu.edu.
+answer.TYPE = 1
+answer.CLASS = 1
+answer.TTL = 120
+answer.RDLENGTH = 14
+answer.RDATA = 129.174.134.28
+......................................
+
+Authority:
+
+Additional:
+
+[aditi@aditi-centos-07 ~]$ python3 my-dns-client.py www.google.com
+Preparing DNS query...
+Contacting DNS server...
+Sending DNS query...
+DNS query attempt 1 of 3
+Sending DNS query...
+DNS response received
+Processing DNS response...
+
+Header:
+header.ID = 37215
+header.QR = 1
+header.OPCODE = 0
+header.AA = 0
+header.TC = 0
+header.RD = 1
+header.RA = 1
+header.Z = 0
+header.RCODE = 0
+header.QDCOUNT = 1
+header.ANCOUNT = 6
+header.NSCOUNT = 0
+header.ARCOUNT = 0
+
+Question:
+question.QNAME = www.google.com.
+question.QTYPE = 1
+question.QCLASS = 1
+
+Answer:
+answer.NAME = www.google.com.
+answer.TYPE = 1
+answer.CLASS = 1
+answer.TTL = 120
+answer.RDLENGTH = 14
+answer.RDATA = 172.253.63.105
+......................................
+answer.NAME = www.google.com.
+answer.TYPE = 1
+answer.CLASS = 1
+answer.TTL = 120
+answer.RDLENGTH = 14
+answer.RDATA = 172.253.63.103
+......................................
+answer.NAME = www.google.com.
+answer.TYPE = 1
+answer.CLASS = 1
+answer.TTL = 120
+answer.RDLENGTH = 14
+answer.RDATA = 172.253.63.104
+......................................
+answer.NAME = www.google.com.
+answer.TYPE = 1
+answer.CLASS = 1
+answer.TTL = 120
+answer.RDLENGTH = 14
+answer.RDATA = 172.253.63.147
+......................................
+answer.NAME = www.google.com.
+answer.TYPE = 1
+answer.CLASS = 1
+answer.TTL = 120
+answer.RDLENGTH = 14
+answer.RDATA = 172.253.63.106
+......................................
+answer.NAME = www.google.com.
+answer.TYPE = 1
+answer.CLASS = 1
+answer.TTL = 120
+answer.RDLENGTH = 13
+answer.RDATA = 172.253.63.99
+......................................
+
+Authority:
+
+Additional:
+
+[aditi@aditi-centos-07 ~]$ python3 my-dns-client.py www.amazon.com
+Preparing DNS query...
+Contacting DNS server...
+Sending DNS query...
+DNS query attempt 1 of 3
+Sending DNS query...
+DNS response received
+Processing DNS response...
+
+Header:
+header.ID = 2957
+header.QR = 1
+header.OPCODE = 0
+header.AA = 0
+header.TC = 0
+header.RD = 1
+header.RA = 1
+header.Z = 0
+header.RCODE = 0
+header.QDCOUNT = 1
+header.ANCOUNT = 3
+header.NSCOUNT = 0
+header.ARCOUNT = 0
+
+Question:
+question.QNAME = www.amazon.com.
+question.QTYPE = 1
+question.QCLASS = 1
+
+Answer:
+answer.NAME = www.amazon.com.
+answer.TYPE = 5
+answer.CLASS = 1
+answer.TTL = 1464
+......................................
+answer.NAME = tp.47cf2c8c9-frontier.amazon.com.
+answer.TYPE = 5
+answer.CLASS = 1
+answer.TTL = 60
+......................................
+answer.NAME = d3ag4hukkh62yn.cloudfront.net.
+answer.TYPE = 1
+answer.CLASS = 1
+answer.TTL = 60
+answer.RDLENGTH = 12
+answer.RDATA = 18.160.9.118
+......................................
+
+Authority:
+
+Additional:
+
+[aditi@aditi-centos-07 ~]$ python3 my-dns-client.py www.cnn.com
+Preparing DNS query...
+Contacting DNS server...
+Sending DNS query...
+DNS query attempt 1 of 3
+Sending DNS query...
+DNS response received
+Processing DNS response...
+
+Header:
+header.ID = 57414
+header.QR = 1
+header.OPCODE = 0
+header.AA = 0
+header.TC = 0
+header.RD = 1
+header.RA = 1
+header.Z = 0
+header.RCODE = 0
+header.QDCOUNT = 1
+header.ANCOUNT = 5
+header.NSCOUNT = 0
+header.ARCOUNT = 0
+
+Question:
+question.QNAME = www.cnn.com.
+question.QTYPE = 1
+question.QCLASS = 1
+
+Answer:
+answer.NAME = www.cnn.com.
+answer.TYPE = 5
+answer.CLASS = 1
+answer.TTL = 139
+......................................
+answer.NAME = cnn-tls.map.fastly.net.
+answer.TYPE = 1
+answer.CLASS = 1
+answer.TTL = 20
+answer.RDLENGTH = 11
+answer.RDATA = 151.101.3.5
+......................................
+answer.NAME = cnn-tls.map.fastly.net.
+answer.TYPE = 1
+answer.CLASS = 1
+answer.TTL = 20
+answer.RDLENGTH = 12
+answer.RDATA = 151.101.67.5
+......................................
+answer.NAME = cnn-tls.map.fastly.net.
+answer.TYPE = 1
+answer.CLASS = 1
+answer.TTL = 20
+answer.RDLENGTH = 13
+answer.RDATA = 151.101.131.5
+......................................
+answer.NAME = cnn-tls.map.fastly.net.
+answer.TYPE = 1
+answer.CLASS = 1
+answer.TTL = 20
+answer.RDLENGTH = 13
+answer.RDATA = 151.101.195.5
+......................................
+
+Authority:
+
+Additional:
+[aditi@aditi-centos-07 ~]$ exit
+
+Script done on Sun 04 Jun 2023 09:46:26 PM EDT
+[aditi@aditi-centos-07 ~]$
